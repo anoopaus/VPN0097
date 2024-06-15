@@ -61,9 +61,9 @@ if to_tap and self . _tap in w:
 os . write ( self . _tap , to_tap )
 to_tap = None
 if to_sock and self . _sock in w:
-    key = ’ ThisKeyIsNotSoSecretThisKeyIsNot ’ # Debug ,
+    key = ' ThisKeyIsNotSoSecretThisKeyIsNot ' # Debug ,
     can be replaced with keyfile
-nonce = ’ NonceNonceNonceNonceNonc ’
+nonce = ' NonceNonceNonceNonceNonc '
 to_sock_encrypted = nacl . crypto_secretbox ( to_sock ,
 nonce , key )
 to_sock = to_sock_encrypted
@@ -77,5 +77,5 @@ continue
 sys . stderr . write ( str (e))
 break
 except KeyboardInterrupt :
-print u ’\ u0008 \ u0008NaClShuttle : Closed .’
+print u '\ u0008 \ u0008NaClShuttle : Closed .'
 sys . exit (0)
